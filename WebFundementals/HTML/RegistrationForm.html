@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Recreate Signup Form</title>
+        <style>
+            body{
+                flex: 1;
+                text-align: left;
+            },
+            input{
+                margin-left: 50px;
+                flex-direction: column;
+            },
+        </style>
+    </head>
+    <body>
+        <form>
+            <p>My Registration Form</p>
+            <label for="first_name">First Name:</label>
+            <input type="text" id="first_name" name="first_name"></br></br>
+
+            <label for="last_name">Last Name:</label>
+            <input type="text" id="last_name" name="last_name"></br></br>
+
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email"></br></br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password"></br></br>
+
+            <label for="confirm_pw">Password Confirmation:</label>
+            <input type="password" id="confirm_pw" name="password_confirmation"></br></br>
+
+            <label for="birthday">Birthday:</label>
+            <input type="date" name="birthday"></br></br>
+
+            <p>Select your gender:</p>
+            <label for="male">Male</label>
+            <input type="radio" id="male" name="gender" value="male">
+
+            <label for="female">Female</label>
+            <input type="radio" id="female" name="gender" value="female">
+
+            <label for="non_binary">Non Binary</label>
+            <input type="radio" id="Nonbinary" name="gender" value="non_binary">
+
+            <label for="other">Not Listed</label>
+            <input type="radio" id="other" name="gender" value="other">
+
+            <p>A short description about yourself:</p>
+            <textarea name="description"></textarea></br></br>
+
+            <label for="programming_languages">Favorite Language: </label>
+            <select name="programming_languages" size="1">
+                <option value="javascript">Javascript</option>
+                <option value="c#">C#</option>
+                <option value="python">Python</option>
+                <option value="ruby">Ruby</option>
+            </select>
+            </br></br>
+            <input type="submit" value="submit">
+        </form>
+    </body>
+</html>

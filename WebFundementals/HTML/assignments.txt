@@ -1,0 +1,85 @@
+Last login: Mon Dec 11 15:27:30 on ttys001
+Hermes:~ rachel$ mkdir DojoAssignments
+Hermes:~ rachel$ cd DojoAssignments/
+Hermes:DojoAssignments rachel$ mkdir WebFundamentals
+Hermes:DojoAssignments rachel$ mkdir Python
+Hermes:DojoAssignments rachel$ mkdir MEAN
+Hermes:DojoAssignments rachel$ mkdir Ruby
+Hermes:DojoAssignments rachel$ mkdir iOS
+Hermes:DojoAssignments rachel$ mkdir netCore
+Hermes:DojoAssignments rachel$ touch about.txt
+Hermes:DojoAssignments rachel$ ls
+MEAN		Ruby		about.txt	netCore
+Python		WebFundamentals	iOS
+Hermes:DojoAssignments rachel$ cd WebFundamentals/
+Hermes:WebFundamentals rachel$ touch.txt
+-bash: touch.txt: command not found
+Hermes:WebFundamentals rachel$ touch about.txt
+Hermes:WebFundamentals rachel$ cd ..
+Hermes:DojoAssignments rachel$ cd Python/
+Hermes:Python rachel$ touch about.txt
+Hermes:Python rachel$ cd ..
+Hermes:DojoAssignments rachel$ cd MEAN/
+Hermes:MEAN rachel$ touch about.txt
+Hermes:MEAN rachel$ cd ..
+Hermes:DojoAssignments rachel$ cd Ruby/
+Hermes:Ruby rachel$ touch about.txt
+Hermes:Ruby rachel$ cd ..
+Hermes:DojoAssignments rachel$ cd iOS/
+Hermes:iOS rachel$ touch about.txt
+Hermes:iOS rachel$ cd ..
+Hermes:DojoAssignments rachel$ cd netCore/
+Hermes:netCore rachel$ touch about.txt
+Hermes:netCore rachel$ cd..
+-bash: cd..: command not found
+Hermes:netCore rachel$ ls
+about.txt
+Hermes:netCore rachel$ cd ..
+Hermes:DojoAssignments rachel$ ls
+MEAN		Ruby		about.txt	netCore
+Python		WebFundamentals	iOS
+Hermes:DojoAssignments rachel$ rm -rf about.txt
+Hermes:DojoAssignments rachel$ ls
+MEAN		Ruby		iOS
+Python		WebFundamentals	netCore
+Hermes:DojoAssignments rachel$ cd WebFundamentals/
+Hermes:WebFundamentals rachel$ mkdir Git
+Hermes:WebFundamentals rachel$ mkdir HTML
+Hermes:WebFundamentals rachel$ mkdir CSS
+Hermes:WebFundamentals rachel$ mkdir Javascript
+Hermes:WebFundamentals rachel$ ls
+CSS		Git		HTML		Javascript	about.txt
+Hermes:WebFundamentals rachel$ cd HTML/
+Hermes:HTML rachel$ touch indentation.html
+Hermes:HTML rachel$ cd ../../
+Hermes:DojoAssignments rachel$ ls -R
+MEAN		Ruby		iOS
+Python		WebFundamentals	netCore
+
+./MEAN:
+about.txt
+
+./Python:
+about.txt
+
+./Ruby:
+about.txt
+
+./WebFundamentals:
+CSS		Git		HTML		Javascript	about.txt
+
+./WebFundamentals/CSS:
+
+./WebFundamentals/Git:
+
+./WebFundamentals/HTML:
+indentation.html
+
+./WebFundamentals/Javascript:
+
+./iOS:
+about.txt
+
+./netCore:
+about.txt
+Hermes:DojoAssignments rachel$
