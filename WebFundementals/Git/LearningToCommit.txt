@@ -1,0 +1,87 @@
+Last login: Mon Dec 11 16:41:57 on ttys002
+Hermes:~ rachel$ cd Desktop/
+Hermes:Desktop rachel$ mkdir gittest
+Hermes:Desktop rachel$ cd gittest/
+Hermes:gittest rachel$ touch index.html
+Hermes:gittest rachel$ touch styles.css
+Hermes:gittest rachel$ touch aboutMe.txt
+Hermes:gittest rachel$ git init
+Initialized empty Git repository in /Users/rachel/Desktop/gittest/.git/
+Hermes:gittest rachel$ git commit -m "updated aboutMe"
+On branch master
+
+Initial commit
+
+Untracked files:
+	aboutMe.txt
+	index.html
+	styles.css
+
+nothing added to commit but untracked files present
+Hermes:gittest rachel$ git add .
+Hermes:gittest rachel$ git commit -m "updated aboutMe"
+[master (root-commit) fb5e242] updated aboutMe
+ 3 files changed, 2 insertions(+)
+ create mode 100644 aboutMe.txt
+ create mode 100644 index.html
+ create mode 100644 styles.css
+Hermes:gittest rachel$ git commit -m "added favorite movie to aboutMe"
+Revert "added favorite movie to aboutMe"
+On branch master
+Changes not staged for commit:
+	modified:   aboutMe.txt
+
+no changes added to commit
+Hermes:gittest rachel$ git add .
+Hermes:gittest rachel$ git commit -m "added favorite movie to aboutMe"
+[master 1f9ecc7] added favorite movie to aboutMe
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+Hermes:gittest rachel$ git log
+commit 1f9ecc7c7c634761d10436c2b2e6e8a93eff6990 (HEAD -> master)
+Author: Rachel Bazelais <bazelais.rachel@gmail.com>
+Date:   Mon Dec 11 16:47:55 2017 -0800
+
+    added favorite movie to aboutMe
+
+commit fb5e242b04990cd12ddc46d7475220c1ca004ad7
+Author: Rachel Bazelais <bazelais.rachel@gmail.com>
+Date:   Mon Dec 11 16:46:24 2017 -0800
+
+    updated aboutMe
+Hermes:gittest rachel$ git revert HEAD aboutMe.txt
+fatal: bad revision 'aboutMe.txt'
+Hermes:gittest rachel$ git revert HEAD
+
+[1]+  Stopped                 git revert HEAD
+Hermes:gittest rachel$ git add .
+Hermes:gittest rachel$ sit status
+-bash: sit: command not found
+Hermes:gittest rachel$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	modified:   aboutMe.txt
+
+Hermes:gittest rachel$ git commit -m "Added new favorite movie"
+[master 81283a2] Added new favorite movie
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Hermes:gittest rachel$ git log
+commit 81283a21b54b4e81499800b19658368f91831955 (HEAD -> master)
+Author: Rachel Bazelais <bazelais.rachel@gmail.com>
+Date:   Mon Dec 11 16:55:25 2017 -0800
+
+    Added new favorite movie
+
+commit 1f9ecc7c7c634761d10436c2b2e6e8a93eff6990
+Author: Rachel Bazelais <bazelais.rachel@gmail.com>
+Date:   Mon Dec 11 16:47:55 2017 -0800
+
+    added favorite movie to aboutMe
+
+commit fb5e242b04990cd12ddc46d7475220c1ca004ad7
+Author: Rachel Bazelais <bazelais.rachel@gmail.com>
+Date:   Mon Dec 11 16:46:24 2017 -0800
+
+    updated aboutMe
+Hermes:gittest rachel$
