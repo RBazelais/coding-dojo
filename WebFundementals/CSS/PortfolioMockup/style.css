@@ -1,0 +1,66 @@
+/* Global Styles */
+* {
+	box-sizing: border-box;
+}
+
+body {
+    font-family: 'Barlow', sans-serif;
+    /*font-family: 'Oswald', sans-serif;*/
+	line-height: 1.0;
+	color: #3a3a3a;
+	margin: 0;
+}
+
+/******* header *******/
+.header{
+
+}
+
+#name{
+
+}
+
+#quip{
+
+}
+
+/******* intro *******/
+#intro{
+
+}
+
+.row{
+
+}
+
+#profile-img{
+
+}
+
+#intro-card{
+
+}
+
+/******* work-card *******/
+.work-card{
+
+}
+
+/*#work-1{}*/
+
+.card-heading{
+
+}
+
+.work-button{
+
+}
+
+/******* footer *******/
+#footer{
+
+}
+
+#social-media{
+
+}
