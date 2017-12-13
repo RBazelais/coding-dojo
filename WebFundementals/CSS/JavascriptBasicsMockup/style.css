@@ -43,26 +43,26 @@ li span.textHiglight{
     background-color: #CF2F36;
     margin-bottom: 15px;
     margin-top: 0;
-    border-radius: 25px;
+    border-radius: 20px;
 }
 #navigation{
     height: 220px;
     width: 170px;
     background-color: #2A7D8C;
     display:inline-block;
-    padding: 15px 15px 50px 10px;
-    border-radius: 25px;
+    padding: 15px 20px 50px 10px;
+    border-radius: 20px;
 
 }
 #main_content{
     height: 500px;
-    width: 725px;
+    width: 710px;
     background-color: black;
-    padding: 15px;
-    padding-bottom: 70px;
+    padding: 20px;
+    padding-bottom: 160px;
     display:inline-block;
     vertical-align: top;
-    border-radius: 25px;
+    border-radius: 20px;
     margin-left: 15px;
     margin-bottom: 0;
 }
@@ -71,7 +71,7 @@ li span.textHiglight{
     height: 50px;
     line-height: 50px;
     background-color: #5D6673;
-    border-radius: 25px;
+    border-radius: 20px;
     padding-left: 15px;
 
 }
