@@ -6,33 +6,78 @@
 </head>
 <body>
 	<div class="wrap">
-		<header class="main-header">
-			<div class="container">
-				<h1 class="name/logo">The World Wide Web</h1>
-				<div class="main-nav"></div>
+		<header>
+			<div class="logo-header">
+                <img src="img/globe.png" alt="">
+				<h1 class="name/logo">The Inter<span class="blue-accent">net</span</h1>
 			</div>
+            <div id="sub-header">
+                <h1>The World Wide Web</h1>
+            </div>
 		</header>
 
 		<div class="container">
 			<div class="primary">
-				<h2>Welcome!</h2>
-				<p>Everything in this city is worth waiting in line for.</p>
-				<p>Cupcake ipsum dolor sit. Amet chocolate cake gummies jelly beans candy bonbon brownie candy. Gingerbread powder muffin. Icing cotton candy. Croissant icing pie ice cream brownie I love cheesecake cookie. Pastry chocolate pastry jelly croissant.</p>
-				<p>Cake sesame snaps sweet tart candy canes tiramisu I love oat cake chocolate bar. Jelly beans pastry brownie sugar plum pastry bear claw tiramisu tootsie roll. Tootsie roll wafer I love chocolate donuts.</p>
+				<div id="contact">
+				    <img src="img/home.png" alt="" id="home-icon">
+                    <span class="tiny-text">Mon - Fri 9a.m. - 5p.m. (Est)</span>
+                    <a href="#">855.967.3787</a>
+                    <span class="tiny-text">International +1.617.936.0555</span>
+                    <img src="img/phone.png" alt="" id="phone-icon">
+				</div>
+                <hr>
+                <h3>Clients and Servers</h3>
+				<p>Computers connected to the <a href="#">Web</a> are called <span class="definitions">clients</span> and <span class="defintions">servers</span>.</p>
+                <ul>
+                    <li>
+                        <p>
+                            <a href="#">Clients</a> are the typical Web user's internet-connected devices (for example, your computer connected to yout Wi-Fi, or your phone connected to your mobile network) and <a href="#"> Web-accessing software</a> avaiable on those devices (usually a web browser liek Firefox or Chrome).
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <a href="#">Servers</a> are computers that store <a href="#">webpages</a>, <a href="#">sites</a> or <a href="#">apps</a>. When a client device wants to access a webpage. a copy of the webpage is downloaded from the server onto the client machine to be displayed in the user's web browser.
+                        </p>
+                    </li>
+                </ul>
+                <img src="img/client_server.jpg" alt="Client server relationship">
+                <h3>So What Actually Happens?</h3>
+                <ol>
+                    <li>
+                        The browser  goes to the <a href="#">DNS server</a> and finds the real address of the <a href="#">server</a> that the website lives on.
+                    </li>
+                    <li>
+                        The browser sends an <a href="#">HTTP request</a> message to the server asking it to send a copy of the website to the client.
+                    </li>
+                    <li>
+                        If the server approves the client's request, the server sends the client a <a href="#">"200 OK" message</a>, which means "Permission granted! Here you go!", abd then starts sending the website's files to the browser as a series of small chunks.
+                    </li>
+                    <li>The broswer assembles the small chunks into a complete website and displays it to you!</li>
+                </ol>
+                <div id="web-triforce">
+                    <img src="" alt="The big 3 - html, css and javascript">
+                    <p>While the server can process information in many different languages, the files that they serve to the client are always going to be some combination of HTML, CSS, and Javascript!</p>
+                    <p>Learn more about the Big 3 <a href="#">here</a>!</p>
+                </div>
 			</div><!--/.primary-->
 
 			<div class="secondary">
-				<h2>Great food</h2>
-				<p>Croissant macaroon pie brownie. Cookie marshmallow liquorice gingerbread caramels toffee I love chocolate. Wafer lollipop dessert. Bonbon jelly beans pudding dessert sugar plum. Marzipan toffee drag&#233;e chocolate bar candy toffee pudding I love. Gummi bears pie gingerbread lollipop.</p>
-				<p> Fruitcake jelly-o croissant souffl&#233;. Biscuit jujubes drag&#233;e. Sesame snaps tootsie roll chocolate bar cake tart macaroon pudding. Ice cream gummies jujubes cupcake. Cake marshmallow cookie lollipop tart.</p>
+				<h3>So, what's an internet?</h3>
+				<p>An <span class="blue-accent">inter</span>connected <span class="blue-accent">Net</span>work of computers all around the world! </p>
+				<button>WATCH A VIDEO</button>
+                <button>MORE RESOURCES</button>
+                <hr>
+                <div id="advertisement">
+                    <img src="img/ad_background.png" alt="background blue binary 1's and 0's">
+                    <p>Reinvent your career in just 14 weeks</p>
+                    <img src="img/ninja.png" alt="">
+                    <button>Learn more...</button>
+                </div>
 			</div><!--/.secondary-->
 
 		</div><!--/.container-->
 
 	</div><!--/.wrap-->
 
-	<footer class="main-footer">
-	 <span>&copy;2015 Residents of The Best City Ever.</span>
-	</footer>
 </body>
 </html>
