@@ -2,14 +2,14 @@
 <html>
 <head>
 	<title>Internet MockUp</title>
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
 	<div class="wrap">
 		<header>
-			<div class="logo-header">
+			<div id="logo-header">
                 <img src="img/globe.png" alt="">
-				<h1 class="name/logo">The Inter<span class="blue-accent">net</span</h1>
+				<h1>The Inter<span class="blue-accent">net</span></h1>
 			</div>
             <div id="sub-header">
                 <h1>The World Wide Web</h1>
@@ -17,9 +17,23 @@
 		</header>
 
 		<div class="container">
-			<div class="primary">
+            <div id="primary">
+				<h2>So, what's an <span id="red-accent">internet</span>?</h2>
+				<p>An <span class="blue-accent">inter</span>connected <span class="blue-accent">Net</span>work of computers all around the world! </p>
+				<button id="blue-btn">WATCH A VIDEO</button>
+                <button id="orange-btn">MORE RESOURCES</button>
+                <hr>
+                <div id="advertisement">
+                    <img src="img/ad_background.png" alt="background blue binary 1's and 0's">
+                    <p>Reinvent your career<br>in just 14 weeks</p>
+                    <img id="ninja"src="img/ninja.png" alt="a ninja">
+                    <button>Learn more...</button>
+                </div>
+			</div><!--/.primary-->
+			<div id="secondary">
 				<div id="contact">
 				    <img src="img/home.png" alt="" id="home-icon">
+                    <span class="blue-accent">DNS</span>
                     <span class="tiny-text">Mon - Fri 9a.m. - 5p.m. (Est)</span>
                     <a href="#">855.967.3787</a>
                     <span class="tiny-text">International +1.617.936.0555</span>
@@ -59,21 +73,10 @@
                     <p>While the server can process information in many different languages, the files that they serve to the client are always going to be some combination of HTML, CSS, and Javascript!</p>
                     <p>Learn more about the Big 3 <a href="#">here</a>!</p>
                 </div>
-			</div><!--/.primary-->
-
-			<div class="secondary">
-				<h3>So, what's an internet?</h3>
-				<p>An <span class="blue-accent">inter</span>connected <span class="blue-accent">Net</span>work of computers all around the world! </p>
-				<button>WATCH A VIDEO</button>
-                <button>MORE RESOURCES</button>
-                <hr>
-                <div id="advertisement">
-                    <img src="img/ad_background.png" alt="background blue binary 1's and 0's">
-                    <p>Reinvent your career in just 14 weeks</p>
-                    <img src="img/ninja.png" alt="">
-                    <button>Learn more...</button>
-                </div>
 			</div><!--/.secondary-->
+
+
+
 
 		</div><!--/.container-->
 

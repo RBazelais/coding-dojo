@@ -17,7 +17,6 @@ body{
     background: -webkit-linear-gradient(#245076, #3372aa);
     background: -moz-linear-gradient(#245076, #3372aa);
     background: linear-gradient(#245076, #3372aa);
-
 }
 
 #header{
@@ -90,6 +89,7 @@ body{
     background-color: green;
     width: 200px;
     height: auto;
+	display: inline-block;
     /*float: left;*/
 }
 
@@ -100,5 +100,6 @@ body{
 #right-column{
     background-color: gray;
     width: 400px;
+	display: inline-block;
     /*float: right;*/
 }
