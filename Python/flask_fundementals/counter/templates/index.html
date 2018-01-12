@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            flex-flow: column;
+            justify-content: space-around;
+            text-align: center;
+        }
+        #wrapper{
+            margin: auto;
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <h1>Counter</h1>
+        <p>{{ session["count"] }} times</p>
+        <button type="button"><a href="/2">+ 2</a></button>
+        <button type="button"/><a href="/reset">Reset</a></button>
+
+    </div>
+</body>
+</html>
