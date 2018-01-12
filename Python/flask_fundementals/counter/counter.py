@@ -20,6 +20,5 @@ def multiple(amount):
 @app.route('/reset')
 def reset():
     session["count"] = 1
-    return index(0)
-
+    return redirect('/')
 app.run(debug=True)
