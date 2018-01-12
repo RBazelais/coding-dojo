@@ -17,12 +17,15 @@ class Product(object):
         if reason == "defective":
             self.price = 0
             self.status = "defective"
+            
         elif reason == "sealed box":
             self.status = "For Sale"
+            
         elif reason == "open box":
             self.status = "used"
             discount = self.price * .20
             self.price += discount
+        print self.status
 
     def displayAll(self):
         print self.price
@@ -32,6 +35,6 @@ class Product(object):
         print self.status
 
 #created an instance of the class
-Soap = Product(2, "soap", "3oz", "dove", "new")
-#Soap.Return("sealed box")
-Soap.price
+Soap = Product(2.00, "soap", "3oz", "dove", "new")
+Soap.displayAll()
+Soap.Return("defective")
