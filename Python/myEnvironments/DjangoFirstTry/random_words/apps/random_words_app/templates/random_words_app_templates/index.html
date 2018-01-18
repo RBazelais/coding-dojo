@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% load static %}
+    <link rel="stylesheet" href="static/style.css">
+    <title>Random Words App</title>
+</head>
+<body>
+    <h2 class="center">Random Word (attempt #{{request.session.visit_count}})</h2>
+    <p class="center box">{{word}}</p>
+    <form class="center" action="/" method="post">
+        {% csrf_token %}
+        <input type="Submit" value="submit">
+    </form> 
+</body>
+</html>

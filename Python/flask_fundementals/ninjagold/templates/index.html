@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Ninja Gold Flask</title>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+	</head>
+
+	<body>
+		<div id="wrapper">
+			<div id="display-container">
+				<span>Your Gold:</span>
+				<span id="display-value">{{ gold }}</span>
+			</div>
+
+			<div id="option-container">
+				<div id="house" class="option-box">
+					<div class="option-text-container">
+						<span class="option-title">House</span>
+						<span class="option-description">(earns 2-5 gold)</span>
+						<form action="/process_money" method="post">
+							<input type="hidden" name="building" value="farm" />
+							<input type="submit" value="Find Gold!"/>
+						</form>
+					</div>
+				</div>
+
+				<div id="cave" class="option-box">
+					<div class="option-text-container">
+						<span class="option-title">Cave</span>
+						<span class="option-description">(earns 5-10 gold)</span>
+						<form action="/process_money" method="post">
+							<input type="hidden" name="building" value="farm" />
+							<input type="submit" value="Find Gold!"/>
+						</form>
+					</div>
+				</div>
+
+				<div id="farm" class="option-box">
+					<div class="option-text-container">
+						<span class="option-title">Farm</span>
+						<span class="option-description">(earns 10-20 gold)</span>
+						<form action="/process_money" method="post">
+							<input type="hidden" name="building" value="farm" />
+							<input type="submit" value="Find Gold!"/>
+						</form>
+					</div>
+				</div>
+
+				<div id="casino" class="option-box">
+					<div class="option-text-container">
+						<span class="option-title">Casino</span>
+						<span class="option-description">(earns/takes 0-50 gold)</span>
+						<form action="/process_money" method="post">
+							<input type="hidden" name="building" value="farm" />
+							<input type="submit" value="Find Gold!"/>
+						</form>
+					</div>
+				</div>
+			</div>
+
+			<div id="log">
+				{{ log }}
+			</div>
+		</div>		
+	</body>
+</html>
