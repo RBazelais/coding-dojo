@@ -18,7 +18,11 @@ def index(request):
 		"raptors": Team.objects.filter(team_name__contains="Raptors"),
 		"city": Team.objects.filter(location__contains="City"),
 		"t": Team.objects.filter(team_name__startswith="T"),
-		# "abc": Team.objects.order_by(team_name),
+		"reverseabc":Team.objects.order_by("-team_name"),
+		"lastcoop": Player.objects.filter(last_name__contains="Cooper"),
+		"firstjosh": Player.objects.filter(first_name__contains="Joshua"),
+		"notname": Player.objects.filter(last_name__contains="Cooper").exclude(first_name__contains="Joshua"),
+		"orname": Player.objects.filter(first_name__contains="Alexander") | Player.objects.filter(first_name__contains="Wyatt"),
 
 	}
 	return render(request, "leagues/index.html", context)
