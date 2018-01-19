@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Compiled and minified CSS -->
+    {% load static %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" href="{% static style.css %}">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <title>Ninja Gold Django</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col m12">
+                <h3>Gold: {{ request.session.gold }}</h3>
+                <a href="/reset" class="waves-effect waves-light btn">Reset</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12 m6 l3">
+                <div class="card blue-grey darken-1">
+                    <div class="card-content white-text">
+                        <span class="card-title">Farm</span>
+                        <p>(Earns 10 - 20 Gold)</p>
+                    </div>
+                    <div class="card-action">
+                        <form action="/process" method="POST">
+                            {% csrf_token %}
+                            <input type="hidden" name="activity" value="farm">
+                            <input type="submit" value="Find Gold" class="btn">
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m6 l3">
+                <div class="card blue-grey darken-1">
+                    <div class="card-content white-text">
+                        <span class="card-title">Cave</span>
+                        <p>(Earns 2 - 11 Gold)</p>
+                    </div>
+                    <div class="card-action">
+                        <form action="/process" method="POST">
+                            {% csrf_token %}
+                            <input type="hidden" name="activity" value="cave">
+                            <input type="submit" name="" value="Find Gold" class="btn">
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m6 l3">
+                <div class="card blue-grey darken-1">
+                    <div class="card-content white-text">
+                        <span class="card-title">house</span>
+                        <p>(Earns 2 - 6 Gold)</p>
+                    </div>
+                    <div class="card-action">
+                        <form action="/process" method="POST">
+                            {% csrf_token %}
+                            <input type="hidden" name="activity" value="house">
+                            <input type="submit" name="" value="Find Gold" class="btn">
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m6 l3">
+                <div class="card blue-grey darken-1">
+                    <div class="card-content white-text">
+                        <span class="card-title">Casino</span>
+                        <p>(Earns -50 - 50 Gold)</p>
+                    </div>
+                    <div class="card-action">
+                        <form action="/process" method="POST">
+                            {% csrf_token %}
+                            <input type="hidden" name="activity" value="casino">
+                            <input type="submit" name="" value="Find Gold" class="btn">
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- last card ends -->
+        </div>
+        <!-- activity log -->
+        <div>
+            <ul>
+                <!--  -->
+                {% for item in request.session.activity %}
+                <!-- don't want new unordered list tags for each item so this populates this list -->
+                <li class= {{ item.color }}>{{item.content}}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
