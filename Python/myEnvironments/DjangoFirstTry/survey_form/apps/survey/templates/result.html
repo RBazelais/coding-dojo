@@ -6,18 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     {% load static %}
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
-    <link rel="stylesheet" href="static/style.css">
-    <title>Survey Form App</title>
+    <link rel="stylesheet" href="{% static style.css %}">
+    <title>Submitted Information</title>
 </head>
 <body>
     <div id="wrapper">
         <div class="border">
-            <h2 id="title">Survey Form App</h2>
-            <form class="pure-form pure-form-aligned">
+            <h2 id="title-2">Submitted Information</h2>
+            <form class="pure-form pure-form-aligned" action="result" method="POST">
+                {% csrf_token %}
                 <fieldset>
                     <div class="pure-control-group">
-                        {<label for="name">Name</label>
-                        {% object here %}
+                        <label for="name">Name:</label>
+                        {{name}}
                     </div>
                     <div class="pure-control-group">
                         <label for="dojo_location">Dojo Location:</label>
@@ -31,7 +32,7 @@
                         <label for="comment">Comment (optional):</label>
                         {{comment}}
                     </div>
-                    <button type="submit" class="pure-button pure-button-primary">Go Back</button>
+                    <input type="submit" name="" class="pure-button pure-button-primary" value="Back"></input>
                 </fieldset>
             </form>
         </div>

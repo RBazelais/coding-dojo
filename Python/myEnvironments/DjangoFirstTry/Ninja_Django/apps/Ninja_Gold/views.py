@@ -4,9 +4,6 @@ from random import randint
 from datetime import datetime
 
 def index(request):
-    # clear out session or hard code it
-    #request.session.flush() #clears session
-
     # establish session variables here
     if not 'gold' in request.session:
         request.session['gold'] = 0

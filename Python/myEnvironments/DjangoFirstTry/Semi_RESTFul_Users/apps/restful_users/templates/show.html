@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title> New RESTFul Users</title>
+</head>
+<body>
+    <h1>Users</h1>
+    <table cellpadding="10">
+        <tr>
+            <th>ID</th>
+            <th>Full Name</th> 
+            <th>Email Address</th>
+            <th>Created At</th>
+            <th>Actions</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td> 
+            <td></td>
+            <td></td>
+            <td>
+                <a href="#/show/{{user.id}}">Show</a>&nbsp;&nbsp;
+                <a href="#/edit/{{user.id}}">Edit</a>&nbsp;&nbsp;
+                <a href="#/delete/{{user.id}}">Delete</a>
+            </td>
+        </tr>
+        <br>
+		<a href="#/new">Add a new user</a>
+    </table>
+</body>
+</html>

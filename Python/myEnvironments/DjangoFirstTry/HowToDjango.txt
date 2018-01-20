@@ -86,7 +86,7 @@ Create template, static directories in your PROJECT_NAME_APP
         touch index.html
     mkdir static
         cs static
-        touch stles.css
+        touch styles.css
 
 
 
