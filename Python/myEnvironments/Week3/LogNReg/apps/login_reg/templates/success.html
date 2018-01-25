@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{%  block content %}
+
+<main>
+    <h2>Success! Welcome, {{ User.first_name }} </h2>
+    {% csrf_token %}
+    {% if success == "login" %}
+        <p class="success">You logged in successfully!</p>
+    {% else %}
+        <p class="success">You registered successfully!</p>
+    {% endif %}
+</main>
+
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends 'houses/base.html' %}
+{%  block content %}
+
+<main>
+    <h2>Welcome to Ilvermorny {{ request.session.peep }}</h2>
+    <h4>Thunder Bird</h4>
+    <ul>
+        {% for peep in thunderbird %}
+            <li>{{peep.student}}</li>
+        {% endfor %}
+    </ul>
+    <h4>Wampus</h4>
+    <ul>
+        {% for peep in wampus %}
+            <li>{{peep.student}}</li>
+        {% endfor %}
+    </ul>
+    <h4>Horned Snake</h4>
+    <ul>
+        {% for peep in snakes %}
+            <li>{{peep.student}}</li>
+        {% endfor %}
+    </ul>
+    <h4>Pukwudgie</h4>
+    <ul>
+        {% for peep in puks %}
+            <li>{{peep.student}}</li>
+        {% endfor %}
+    </ul>
+</main>
+
+{%  endblock %}
