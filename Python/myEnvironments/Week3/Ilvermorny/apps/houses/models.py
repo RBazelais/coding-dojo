@@ -25,8 +25,6 @@ class StudentManager(models.Manager):
 			errors['password'] = "Password should be more than 6 characters"
 		if len(post_data['password']) != ['confirm_password']:
 			errors['confirm_password'] = "Your passwords must match"
-		# if len(self.filter(email = post_data['email'])) > 0:
-		# 	errors['email'] = "Your email is invalid"
 		return errors
 
 class Student(Base):

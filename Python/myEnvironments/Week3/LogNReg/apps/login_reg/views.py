@@ -1,5 +1,5 @@
 from __future__ import unicode_literals
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, HttpResponse
 from . import models
 from . import forms
 import random
@@ -19,28 +19,11 @@ def index(request):
 
 
 def success(request):
+	print "switch paths to success"
 	return render(request, 'success.html')
 
 def send_data (request):
-	form = RegForm(request.POST)
-	form.save()
-	print "Data has been sent"
+	return HttpResponse("send_data is running...")
 
-	errors = User.objects.basic_validator(request.POST)
-	User.save()
-
-	def is_valid(RegForm):
-		# Yes
-		if len(errors) == 0:
-			print "Form was valid!"
-			request.session['current_user'] = 'current_user'
-			return redirect("/success.html")
-		# No
-		else:
-			for error in errors:
-				# display errors
-				messages.error(request, errors[error])
-			# redirect to new
-			return redirect("/")
 
 	

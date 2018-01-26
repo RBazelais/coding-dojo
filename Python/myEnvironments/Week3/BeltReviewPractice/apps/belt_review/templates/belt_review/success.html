@@ -1,0 +1,16 @@
+{% extends 'belt_review/base.html' %}
+{%  block content %}
+
+<main>
+    <h3>You did it! Welcome to Belt Review</h3>
+    {% csrf_token %}
+    <p class="success">You registered successfully!</p>
+    <ul>
+        <!-- {%  %} -->
+        <li>{{ name }}</li>
+        <li>{{ alias }}</li>
+        <li>{{ email }}</li>
+    </ul>
+</main>
+
+{% endblock %}

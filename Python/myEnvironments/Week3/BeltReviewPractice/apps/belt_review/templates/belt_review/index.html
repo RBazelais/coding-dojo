@@ -1,0 +1,36 @@
+{% extends 'belt_review/base.html' %}
+{%  block content %}
+
+<main>
+    <h1>things go here</h1>
+    <form action="/process" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+            <!-- <label for="name">Name:</label>
+            <input type="text" name="name">
+
+            <label for="alias">Alias:</label>
+            <input type="text" alias="alias">
+
+            <label for="email">Email:</label>
+            <input type="text" email="email">
+
+            <label for="password">Password:</label>
+            <input type="text" password="password">
+
+            <label for="confirm_password">Confirm_password:</label>
+            <input type="text" password="confirm_password">
+            -->
+        <input type="submit" value="Register">
+        {{ form_field_errors }}
+    </form>
+
+    <!-- <form action="/process" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Login">
+        {{ form_field_errors }}
+    </form> -->
+</main>
+
+{%  endblock %}

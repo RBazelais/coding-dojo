@@ -12,16 +12,19 @@
             <label for="first_name">First Name:</label>
             <input type="text" name="first_name">
         </div>
+
         <div class="form-group">
             {{ form.last_name.errors }}
             <label for="last_name">Last Name:</label>
             <input type="text" name="last_name">
         </div>
+
         <div class="form-group">
             {{ form.email.errors }}
             <label for="email">email:</label>
             <input type="email" name="email">
         </div>
+
         <div class="form-group">
             {{ form.password.errors }}
             <label for="password">Password:</label>
@@ -29,10 +32,11 @@
         </div>
 
         <div class="form-group">
-            {{ form.confrim_password.errors }}
+            {{ form.confirm_password.errors }}
             <label for="confirm_password">ConfirmPassword:</label>
             <input type="password" name="confirm_password">
         </div>
+        
         <input class="btn btn-primary" type="submit" value="Register">
     </form>
     <br><br>

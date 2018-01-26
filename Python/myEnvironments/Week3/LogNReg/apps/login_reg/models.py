@@ -3,16 +3,18 @@ from __future__ import unicode_literals
 from django.db import models
 from django.forms import ModelForm
 
-# new_user = User.objects.create(first_name="Bob", last_name="Belcher", email="bob@burgers.com", password="password")
+# User.objects.create("Bob", "Belcher", "bob@burgers.com", "password")
 
-# replacing model manager
+# replaces daefualt model manager
 class UserManager(models.Manager):
     def basic_validator(self, post_data):
 		errors = {}
-		if len(post_data['name']) < 2:
-			errors['name'] = "Blog name should be more than 5 characters"
+		if len(post_data['first_name']) < 2:
+			errors['first_name'] = "Your first ame should be more than 5 characters"
+		if len(post_data['last_name']) < 2:
+			errors['last_name'] = "Your last name should be more than 5 characters"
 		if len(post_data['email']) < 8:
-			errors['email'] = "Blog email should be more than 8 characters"
+			errors['email'] = "Email should be more than 8 characters"
 		if len(post_data['password']) > 3:
 			errors['password'] = "Password should be more than 6 characters"
 		if len(post_data['password']) != ['confirm_password']:
@@ -28,9 +30,4 @@ class User(models.Model):
 	objects = UserManager()
 
 	def __str__(self):
-		return self.first_name, self.last_name
-
-class UserForm(ModelForm):
-    class Meta:
-        model = User
-        fields = ['first_name', 'last_name', 'email', 'password', 'confirm_password']
+		return self.first_name
